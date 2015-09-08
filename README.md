@@ -21,6 +21,8 @@ any problems in GTASSIST software.
 
 GTAssist is a tool that assists in marker selection and allele discrimination during SNP genotyping. This program supports two useful evaluation measures for two-dimensional fluorescent scatter plots of TaqMan assays[1], which are a popular technology in SNP genotyping. The two proposed measures can be used in succeeding genotyping processes. The first proposed measure is the Marker Ranking Measure (MRM) to choose SNP markers with good distributions without relying on clustering results. The second proposed measure is the Individual Genotype Membership Measure (IGMM) which utilizes the membership probability of each genotype to provide beneficial information for gene mapping.
 
+--
+
 << Main features of  GTAssist >>
 
 Assists with allele discrimination of hard fluorescent scatter data for SNP genotyping
@@ -35,6 +37,8 @@ The first measure, MRM, quantifies the distance to an ideal distribution as SNP 
 2. Individual Genotype Membership Measure (program igmm)
 
 The second measure, IGMM, is defined as the membership probabilities of genotype classes. Currently, indistinct individuals remaining after allele discrimination are labelled 'unknown' by expert operators. The 'unknown' individuals may indicate intermediate fluorescent values of two genotypes or weak fluorescent values.The Mahalanobis distances[3] for individuals based on genotype classes are first obtained. The IGMM is then calculated as the membership probability based on the distribution of squared Mahalanobis distances, which approximately follows the c2 distribution.
+
+--
 
 << PROGRAM CONTENTS : (2015/9/8 modified)>>
 
@@ -58,6 +62,8 @@ SNPDATA/*.txt (example files)
 3. Add the following directory to your system path: <mcr_root>\<ver>\runtime\win32 
     NOTE: On Windows XP, this directory is automatically added to your path.
 
+--
+
 << How to use >>
 
 Here we introduce how to use the GTAssist software with the above-mentioned standalone executable programs under MS Windows.
@@ -77,25 +83,23 @@ SNPDATA/igmm_sample.txt
 The filenames without extensions are assigned as SNP names in this software.
 
 Table 1
- 	1st column	2nd column	3rd column	4th column
-contents
-unique individual names	fluorescent data with the 1st dye	fluorescent data with the 2nd dye	Assigned class of the individual
-format
-string	double	double	integer(*)
+<table><tr><td></td><td>1st column</td><td>2nd column</td><td>3rd column</td> <td>4th column</td></tr>   
+<tr><td> contents </td><td>unique individual names </td><td>fluorescent data with the 1st dye</td><td> fluorescent data with the 2nd dye </td><td>Assigned class of the individual </td></tr>     
+<tr><td> format </td><td> string </td><td> double </td><td> double </td><td> integer(*) </td></tr>   </table> 
 (*) This is for convenience. On processing, MATLAB always uses double format.
 
 Table 2
-assigned genotype class
-unknown	NTC	homo1	homo2	hetero
-genotype class index
--1	0	1	2	3
- 
+<table>
+<tr><td>assigned genotype class</td><td>unknown	</td><td>NTC	</td><td> homo1	</td><td> homo2</td><td>hetero </td></tr>
+<tr><td>genotype class index</td><td>-1</td><td>	0	</td><td>1	</td><td>2	</td><td>3</td></tr>
+</table> 
 
 2. Using MRM
 
 (2-1). Run the program 'mrm_win.exe' in the 'MRM_WIN' directory by mouse double-click.
 
-Note that the running program requires 'mrm_win.ctf', which needs to exist in the same directory as the standard executable program.
+> Note that the running program requires 'mrm_win.ctf', which needs to exist in the same directory as the standard executable program.
+
 (2-2). Select the "Load Ideal Data" button, and load the file 'idealSNP.txt' in the 'SNPDATA' directory.
 
 (2-3). Select the "Load Test Data" button, and load 6 SNP files of 'SNP-A.txt' , 'SNP-F.txt' in the 'SNPDATA' directory. You can check data distribution of each SNP by selecting a SNP name in the right listbox.
@@ -160,6 +164,8 @@ Note that you can change the class in the panel by direct keyboard input. Input 
 
 (3-8). The program will close when the "5. Exit" button is pressed.
 
+--
+
 <<< Error Messages >>>
 
 Title	Error Message	MRM	IGMM	Explanation
@@ -168,6 +174,8 @@ Warning	 ? individuals
 ANALYSIS ERROR	Please categorize the data.	 	u	The number of individuals in several classes is zero. You need to label individuals assigned to those classes.
 ANALYSIS ERROR	XXX requires more individuals.	 	u	XXX corresponds to a class. The analysis of IGMM requires that the number of individuals in each class is more than 4.
  
+
+--
 
 <<< References >>>
 
