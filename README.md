@@ -107,7 +107,7 @@ Table 2
 
 (2-4). You can check respective scatter plots of all test SNPs by directly double-clicking an item in the right listbox.
 
-Note that the plot data was automatically normalized by the maximum value of two fluorescent values and shifted to the origin onto the mean of data assigned as the NTC class. If your data includes outliers possible to confuse succeeding marker selection analysis, you can remove the outliers manually and save updated data by the IGMM program. See (3-3).
+> Note that the plot data was automatically normalized by the maximum value of two fluorescent values and shifted to the origin onto the mean of data assigned as the NTC class. If your data includes outliers possible to confuse succeeding marker selection analysis, you can remove the outliers manually and save updated data by the IGMM program. See (3-3).
  
 
 (2-5). Select "Calc. Ideal PDF " and "Calc. Test PDFs" buttons to obtain the probability distributions. 
