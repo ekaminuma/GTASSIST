@@ -2,7 +2,7 @@
 
 GTASSIST: Objective evaluation measures of genetic marker selection in large-scale SNP genotyping
 Kaminuma E, Masuya H, Miura I, Motegi H, Takahasi KR, Nakazawa M, Matsui M, Gondo Y, Noda T, Shiroishi T, Wakana S, Toyoda T.
-J Bioinform Comput Biol. 2008 6:905-17.
+J Bioinform Comput Biol. 2008 6:905-17.  
 http://www.ncbi.nlm.nih.gov/pubmed/18942158
 
 # LICENSE
@@ -21,6 +21,8 @@ any problems in GTASSIST software.
 
 GTAssist is a tool that assists in marker selection and allele discrimination during SNP genotyping. This program supports two useful evaluation measures for two-dimensional fluorescent scatter plots of TaqMan assays[1], which are a popular technology in SNP genotyping. The two proposed measures can be used in succeeding genotyping processes. The first proposed measure is the Marker Ranking Measure (MRM) to choose SNP markers with good distributions without relying on clustering results. The second proposed measure is the Individual Genotype Membership Measure (IGMM) which utilizes the membership probability of each genotype to provide beneficial information for gene mapping.
 
+--
+
 << Main features of  GTAssist >>
 
 Assists with allele discrimination of hard fluorescent scatter data for SNP genotyping
@@ -35,6 +37,8 @@ The first measure, MRM, quantifies the distance to an ideal distribution as SNP 
 2. Individual Genotype Membership Measure (program igmm)
 
 The second measure, IGMM, is defined as the membership probabilities of genotype classes. Currently, indistinct individuals remaining after allele discrimination are labelled 'unknown' by expert operators. The 'unknown' individuals may indicate intermediate fluorescent values of two genotypes or weak fluorescent values.The Mahalanobis distances[3] for individuals based on genotype classes are first obtained. The IGMM is then calculated as the membership probability based on the distribution of squared Mahalanobis distances, which approximately follows the c2 distribution.
+
+--
 
 << PROGRAM CONTENTS : (2015/9/8 modified)>>
 
@@ -58,6 +62,8 @@ SNPDATA/*.txt (example files)
 3. Add the following directory to your system path: <mcr_root>\<ver>\runtime\win32 
     NOTE: On Windows XP, this directory is automatically added to your path.
 
+--
+
 << How to use >>
 
 Here we introduce how to use the GTAssist software with the above-mentioned standalone executable programs under MS Windows.
@@ -77,45 +83,45 @@ SNPDATA/igmm_sample.txt
 The filenames without extensions are assigned as SNP names in this software.
 
 Table 1
- 	1st column	2nd column	3rd column	4th column
-contents
-unique individual names	fluorescent data with the 1st dye	fluorescent data with the 2nd dye	Assigned class of the individual
-format
-string	double	double	integer(*)
+<table><tr><td></td><td>1st column</td><td>2nd column</td><td>3rd column</td> <td>4th column</td></tr>   
+<tr><td> contents </td><td>unique individual names </td><td>fluorescent data with the 1st dye</td><td> fluorescent data with the 2nd dye </td><td>Assigned class of the individual </td></tr>     
+<tr><td> format </td><td> string </td><td> double </td><td> double </td><td> integer(*) </td></tr>   </table> 
 (*) This is for convenience. On processing, MATLAB always uses double format.
 
 Table 2
-assigned genotype class
-unknown	NTC	homo1	homo2	hetero
-genotype class index
--1	0	1	2	3
- 
+<table>
+<tr><td>assigned genotype class</td><td>unknown	</td><td>NTC	</td><td> homo1	</td><td> homo2</td><td>hetero </td></tr>
+<tr><td>genotype class index</td><td>-1</td><td>	0	</td><td>1	</td><td>2	</td><td>3</td></tr>
+</table> 
 
 2. Using MRM
 
 (2-1). Run the program 'mrm_win.exe' in the 'MRM_WIN' directory by mouse double-click.
 
-Note that the running program requires 'mrm_win.ctf', which needs to exist in the same directory as the standard executable program.
+> Note that the running program requires 'mrm_win.ctf', which needs to exist in the same directory as the standard executable program.
+
 (2-2). Select the "Load Ideal Data" button, and load the file 'idealSNP.txt' in the 'SNPDATA' directory.
 
 (2-3). Select the "Load Test Data" button, and load 6 SNP files of 'SNP-A.txt' , 'SNP-F.txt' in the 'SNPDATA' directory. You can check data distribution of each SNP by selecting a SNP name in the right listbox.
 
+![IGMM2-2](https://github.com/ekaminuma/GTASSIST/wiki/img/msm_1-4.jpg)  
 
 (2-4). You can check respective scatter plots of all test SNPs by directly double-clicking an item in the right listbox.
 
-Note that the plot data was automatically normalized by the maximum value of two fluorescent values and shifted to the origin onto the mean of data assigned as the NTC class. If your data includes outliers possible to confuse succeeding marker selection analysis, you can remove the outliers manually and save updated data by the IGMM program. See (3-3).
+> Note that the plot data was automatically normalized by the maximum value of two fluorescent values and shifted to the origin onto the mean of data assigned as the NTC class. If your data includes outliers possible to confuse succeeding marker selection analysis, you can remove the outliers manually and save updated data by the IGMM program. See (3-3).
  
 
 (2-5). Select "Calc. Ideal PDF " and "Calc. Test PDFs" buttons to obtain the probability distributions. 
 
- 
+![IGMM2-2](https://github.com/ekaminuma/GTASSIST/wiki/img/msm_1-5.jpg)   
 
 (2-6). Select the "Calculate Order" button to calculate the Marker Ranking Measure. The ranking, SNP names, and values of MRM are displayed in the listbox.
 
-
+![IGMM2-2](https://github.com/ekaminuma/GTASSIST/wiki/img/msm_1-6.jpg) 
 
 (2-7). Select the "Save Order" button to save the ranking results into a tab-delimited text file. The 1st. to 4th. columns of the file indicate the ranking index, ranked SNP names, file names with full paths, and values of MRM respectively.
 
+![IGMM2-2](https://github.com/ekaminuma/GTASSIST/wiki/img/msm_1-7.jpg) 
 
 (2-8). The program will close when the "Exit" button is pressed.
 
@@ -123,36 +129,47 @@ Note that the plot data was automatically normalized by the maximum value of two
 
 (3-1).Run the program 'igmm_win.exe' in the 'IGMM_WIN' directory by mouse double-click.
 
-Note that the running program requires 'igmm_win.ctf', which needs to exist in the same directory as the standard executable program.
+> Note that the running program requires 'igmm_win.ctf', which needs to exist in the same directory as the standard executable program.
+
 (3-2). Select "1. Load" button, and load the file 'igmm_sample.txt' in the 'SNPDATA' directory. 
 The scatter plot appears in the main figure. Above the figure, the numbers of each classes are displayed. 
 The color of each class is automatically assigned under default colormap. The individuals of 'unknown' class are black-colored.
 
 
+![IGMM2-2](https://github.com/ekaminuma/GTASSIST/wiki/img/igmm2-2.jpg) 
 
 (3-3). Re-normalize data if necessary. The plot data was automatically normalized by the maximum value of two fluorescent values and shifted to the origin onto the mean of data assigned as the NTC class. If your data includes outliers possible to confuse succeeding analysis, you can remove the outliers with manual works as follows.
 
 Click "2.Select One" button, and select an individual corresponding to the outlier on the main figure. Then select "Remove One" in the Edit menu. Next, select "Normalize Data" in Tool menu. You can save the renormalized data by using "4. Save" button.
 
-Note that the genotype class index of the removed individual is assigned to NaN. Thus NaN should be shown in the 4th column of the individual row in the saved file. When loading data, the GTAssist software ignores NaN assigned individuals.
+> Note that the genotype class index of the removed individual is assigned to NaN. Thus NaN should be shown in the 4th column of the individual row in the saved file. When loading data, the GTAssist software ignores NaN assigned individuals.
+
 (3-4). Click "2. Select One" button, and click on an 'unknown' individual in the main figure to see IGMM membership probabilities of an individual. The IGMM membership probabilities are shown in the right figure. The information of the selected individual also appears in the panel of 'Individual information'.
 
+![IGMM2-2](https://github.com/ekaminuma/GTASSIST/wiki/img/igmm2-4-1.jpg) 
+![IGMM2-2](https://github.com/ekaminuma/GTASSIST/wiki/img/igmm2-4-2.jpg) 
 
 
  
 
 (3-5). Select "3. Update One" button if you want to change the class of the selected individual based on the maximum of the IGMM membership probabilities. The class in the panel and the color of the individual in the figure are updated. 
+
 The 'undo' of this operation is provided as an item in the Edit menu.
 
+![IGMM2-2](https://github.com/ekaminuma/GTASSIST/wiki/img/igmm2-5-1.jpg) 
 
 
-Note that you can change the class in the panel by direct keyboard input. Input the name of assigned genotype class 'homo2' or the corresponding genotype class index '2'.
+> Note that you can change the class in the panel by direct keyboard input. Input the name of assigned genotype class 'homo2' or the corresponding genotype class index '2'.
 
+![IGMM2-2](https://github.com/ekaminuma/GTASSIST/wiki/img/igmm2-5-3.jpg) 
 
 
  
 
 (3-6). You can choose "2'. Select All" and "3'. Update All" buttons if you update the classes of all 'unknown' individuals by using the IGMM membership probabilities.
+
+![IGMM2-2](https://github.com/ekaminuma/GTASSIST/wiki/img/igmm2-6-1.jpg) 
+![IGMM2-2](https://github.com/ekaminuma/GTASSIST/wiki/img/igmm2-6-2.jpg) 
 
 
 
@@ -160,14 +177,19 @@ Note that you can change the class in the panel by direct keyboard input. Input 
 
 (3-8). The program will close when the "5. Exit" button is pressed.
 
+--
+
 <<< Error Messages >>>
 
-Title	Error Message	MRM	IGMM	Explanation
-Warning	 ? individuals
- [?]->[unknown]	 	u	Individuals of unsupported codes are automatically assigned to the ‘unknown’ code.
-ANALYSIS ERROR	Please categorize the data.	 	u	The number of individuals in several classes is zero. You need to label individuals assigned to those classes.
-ANALYSIS ERROR	XXX requires more individuals.	 	u	XXX corresponds to a class. The analysis of IGMM requires that the number of individuals in each class is more than 4.
- 
+<table>
+<tr><th>Title</th><th>	Error Message</th><th>	MRM	</th><th>IGMM</th><th>Explanation</th></tr>
+<tr><td>Warning	</td><td> ? individuals<br>
+ [?]->[unknown]	</td><td> </td><td> 	x </td><td>Individuals of unsupported codes are automatically assigned to the ‘unknown’ code.</td></tr>
+<tr><td>ANALYSIS ERROR	</td><td> 	Please categorize the data.	</td><td> 		</td><td>  	x	</td><td> 	The number of individuals in several classes is zero. You need to label individuals assigned to those classes.</td></tr>
+<tr><td>ANALYSIS ERROR	</td><td> 	XXX requires more individuals.	</td><td> 	</td><td> 	 	x		</td><td> XXX corresponds to a class. The analysis of IGMM requires that the number of individuals in each class is more than 4.
+</td></tr></table> 
+
+--
 
 <<< References >>>
 
