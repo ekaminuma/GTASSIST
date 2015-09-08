@@ -2,7 +2,7 @@
 
 GTASSIST: Objective evaluation measures of genetic marker selection in large-scale SNP genotyping
 Kaminuma E, Masuya H, Miura I, Motegi H, Takahasi KR, Nakazawa M, Matsui M, Gondo Y, Noda T, Shiroishi T, Wakana S, Toyoda T.
-J Bioinform Comput Biol. 2008 6:905-17.
+J Bioinform Comput Biol. 2008 6:905-17.  
 http://www.ncbi.nlm.nih.gov/pubmed/18942158
 
 # LICENSE
