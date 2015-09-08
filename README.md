@@ -17,3 +17,16 @@ experiment using the individual genotype membership measure clarified that the t
 individuals was remarkably reduced compared to that of manually unclassified ones. These two evaluation 
 measures were implemented as the GTAssist software. GTAssist provides objective standards and avoids 
 subjective biases in SNP genotyping workflows.
+
+# LICENSE
+
+RIKEN : All Rights Reserved.
+
+# CONTACT INFORMATION
+
+Please ask to Eli Kaminuma(National Institute of Genetics) and Hiroshi Masuya(RIKEN BRC) if you have 
+any problems in GTASSIST software.
+
+
+
+
