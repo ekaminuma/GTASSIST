@@ -24,7 +24,7 @@ RIKEN : All Rights Reserved.
 
 # CONTACT INFORMATION
 
-Please ask to Eli Kaminuma(National Institute of Genetics) and Hiroshi Masuya(RIKEN BRC) if you have 
+Please ask to [Eli Kaminuma](http://www.nig.ac.jp/nig/research/organization-top/organization/nakamura)(National Institute of Genetics) and [Hiroshi Masuya](http://ja.brc.riken.jp/lab/bpmp/unit/unit_member.html)](RIKEN BRC) if you have 
 any problems in GTASSIST software.
 
 
