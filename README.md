@@ -184,9 +184,9 @@ The 'undo' of this operation is provided as an item in the Edit menu.
 <table>
 <tr><th>Title</th><th>	Error Message</th><th>	MRM	</th><th>IGMM</th><th>Explanation</th></tr>
 <tr><td>Warning	</td><td> ? individuals<br>
- [?]->[unknown]	</td><td> </td><td> 	u </td><td>Individuals of unsupported codes are automatically assigned to the ‘unknown’ code.</td></tr>
-<tr><td>ANALYSIS ERROR	</td><td> 	Please categorize the data.	</td><td> 		</td><td>  	u	</td><td> 	The number of individuals in several classes is zero. You need to label individuals assigned to those classes.</td></tr>
-<tr><td>ANALYSIS ERROR	</td><td> 	XXX requires more individuals.	</td><td> 	</td><td> 	 	u		</td><td> XXX corresponds to a class. The analysis of IGMM requires that the number of individuals in each class is more than 4.
+ [?]->[unknown]	</td><td> </td><td> 	x </td><td>Individuals of unsupported codes are automatically assigned to the ‘unknown’ code.</td></tr>
+<tr><td>ANALYSIS ERROR	</td><td> 	Please categorize the data.	</td><td> 		</td><td>  	x	</td><td> 	The number of individuals in several classes is zero. You need to label individuals assigned to those classes.</td></tr>
+<tr><td>ANALYSIS ERROR	</td><td> 	XXX requires more individuals.	</td><td> 	</td><td> 	 	x		</td><td> XXX corresponds to a class. The analysis of IGMM requires that the number of individuals in each class is more than 4.
 </td></tr></table> 
 
 --
