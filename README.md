@@ -7,12 +7,11 @@ http://www.ncbi.nlm.nih.gov/pubmed/18942158
 
 # LICENSE
 
-RIKEN : All Rights Reserved.
+RIKEN : All Rights Reserved. Please check [LICENSE.md](LICENSE.md).
 
 # CONTACT INFORMATION
 
-Please ask to [Eli Kaminuma](http://www.nig.ac.jp/nig/research/organization-top/organization/nakamura)(National Institute of Genetics) and [Hiroshi Masuya](http://ja.brc.riken.jp/lab/bpmp/unit/unit_member.html)(RIKEN BRC) if you have 
-any problems in GTASSIST software.
+Please ask to [Eli Kaminuma](http://www.nig.ac.jp/nig/research/organization-top/organization/nakamura)(National Institute of Genetics) and [Hiroshi Masuya](http://ja.brc.riken.jp/lab/bpmp/unit/unit_member.html)(RIKEN BRC) if you have any questions in GTASSIST software.
 
 ----
 # GTASSIST Instruction
